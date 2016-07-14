@@ -3,6 +3,9 @@ Simple app and web config wrapper for .net
 
 The main benefit is it lets developers create configurable options without reasonable defaults.
 
+Thread.Sleep(ConfigHelper.GetAppSetting<int>("sleep-delay-between-runs", 1000);```
+
+
 ```var codeName = ConfigHelper.GetAppSetting<string>("code-name", "duchess");```
 
 So if you have a config value of:
