@@ -13,7 +13,7 @@ So if you have a config value of:
 you get "elvis".  If you delete that key, you get "duchess"
 
 
-```var volume = ConfigHelper.GetAppSetting<string>("volume-level", 11);```
+```var volume = ConfigHelper.GetAppSetting<int>("volume-level", 11);```
 
 defaults to 11, or pulls from config.
 
