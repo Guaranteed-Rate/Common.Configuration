@@ -1,7 +1,7 @@
 # Common.Configuration
 Simple app and web config wrapper for .net
 
-The main benefit is it lets developers create configurable options without reasonable defaults.
+The main benefit is it lets developers create configurable options with defaults.
 
 ```Thread.Sleep(ConfigHelper.GetAppSetting<int>("sleep-delay-between-runs", 1000));```
 
