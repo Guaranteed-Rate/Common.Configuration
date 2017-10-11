@@ -6,6 +6,7 @@ Benefits:
 - Supports hardcoding a default value that gets overridden if a config value is present.
 
 Examples:
+
 ```Thread.Sleep(ConfigHelper.GetAppSetting<int>("sleep-delay-between-runs", 1000));```
 
 Returns and int of 1000 if there is no config value specified.
