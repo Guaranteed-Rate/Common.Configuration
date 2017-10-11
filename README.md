@@ -1,13 +1,13 @@
 # Common.Configuration
 This is a very simple wrapper library to make reading web.config or app.config trivially easy.  
 
-##Benefits:
+## Benefits:
 - Automatically casting config values to common types
 - Supports hardcoding a default value that gets overridden if a config value is present.
 
-##Examples:
+## Examples:
 
-###Integers:
+### Integers:
 
 ```Thread.Sleep(ConfigHelper.GetAppSetting<int>("sleep-delay-between-runs", 1000));```
 
@@ -19,7 +19,7 @@ If config has an entry like this:
 
 We sleep for 500 ms.
 
-###Strings:
+### Strings:
 
 ```var codeName = ConfigHelper.GetAppSetting<string>("code-name", "duchess");```
 
