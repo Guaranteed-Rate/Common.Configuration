@@ -1,8 +1,8 @@
 ﻿namespace GuaranteedRate.Common.Configuration
 {
     /// <summary>
-    /// This class that just wraps the helper functions.  
-    /// It a class so we can do dependency injection by having a dependent class accept IConfigWrapper and inject test values in unit tests.
+    /// This class that just wraps the helper functions found in ConfigHelpers.
+    /// This class exists so we can make another project use the IConfigWrapper interface and inject either this class or a Mock at runtime.
     /// </summary>
     public class ConfigWrapper : IConfigWrapper
     {
