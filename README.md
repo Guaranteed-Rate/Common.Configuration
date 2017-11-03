@@ -17,3 +17,17 @@ you get "elvis".  If you delete that key, you get "duchess"
 
 defaults to 11, or pulls from config.
 
+
+##Use
+
+Either directly reference the ConfigHelper.cs class or use dependency injection and make your callers dependent on IConfigWrapper.cs
+
+The latter allows one to set up mock values for testing e.g.
+
+~~~~
+private readonly IConfigWrapper _config;
+
+public ClassThatDoesSomething(IConfigWrapper injectedConfig){
+    _config = injectedConfig;
+}
+~~~~
