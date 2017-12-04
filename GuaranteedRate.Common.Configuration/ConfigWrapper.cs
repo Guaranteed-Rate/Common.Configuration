@@ -1,4 +1,6 @@
-﻿namespace GuaranteedRate.Common.Configuration
+﻿using System.Collections.Generic;
+
+namespace GuaranteedRate.Common.Configuration
 {
     /// <summary>
     /// This class that just wraps the helper functions found in ConfigHelpers.
@@ -18,6 +20,10 @@
         public T GetAppSetting<T>(string key, T defaultValue, bool errorOnWrongType = false)
         {
             return ConfigHelper.GetAppSetting<T>(key, defaultValue, errorOnWrongType);
+        }
+        public IEnumerable<T> GetAppSetting<T>(string key, IEnumerable<T> defaultValue, char[] delimiter)
+        {
+            return ConfigHelper.GetAppSetting<T>(key, defaultValue, delimiter);
         }
     }
 }

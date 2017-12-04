@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GuaranteedRate.Common.Configuration
 {
@@ -40,5 +42,42 @@ namespace GuaranteedRate.Common.Configuration
                 return defaultValue;
             }
         }
+        /// <summary>
+        /// Always errors if types cannot be cast.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="defaultValue"></param>
+        /// <param name="delimiter"></param>
+        /// <returns></returns>
+        public static  IEnumerable<T> GetAppSetting<T>(string key, IEnumerable<T> defaultValue, char[] delimiter )
+        {
+            var value = GetAppSetting(key, string.Empty);
+            var values = value.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+            var result = new List<T>();
+            foreach (var v in values)
+            {
+                try
+                {
+                    result.Add((T)Convert.ChangeType(result, typeof(T)));
+                }
+                 
+                catch (Exception)
+                {
+                     
+                        throw new Exception(string.Format("Problem fetching {0} as {1}.  It's a {2}", key, typeof(T).Name,
+                            result.GetType().Name));
+                     
+
+                }
+            }
+            if (result.Any())
+            {
+                return result;
+            }
+            return defaultValue;
+        }
+
+
     }
 }
