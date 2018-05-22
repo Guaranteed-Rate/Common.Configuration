@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuaranteedRate.Common.Configuration", "GuaranteedRate.Common.Configuration\GuaranteedRate.Common.Configuration.csproj", "{49CDAF41-3A5E-4E80-ABC6-4E3D6103664A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9E665E3-A54F-4EF4-84A4-9A4EC7D7AE39}"
 	ProjectSection(SolutionItems) = preProject
 		Changelog.md = Changelog.md
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuaranteedRate.Common.ConfigurationTests", "GuaranteedRate.Common.ConfigurationTests\GuaranteedRate.Common.ConfigurationTests.csproj", "{356BA6A7-F0B6-41B7-9BE1-37F7AC033DC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Configuration", "Common.Configuration\Common.Configuration.csproj", "{49CDAF41-3A5E-4E80-ABC6-4E3D6103664A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.ConfigurationTests", "Common.Configuration.Tests\Common.ConfigurationTests.csproj", "{356BA6A7-F0B6-41B7-9BE1-37F7AC033DC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F030615F-9F25-4885-B8BA-523E4F5D884E}
 	EndGlobalSection
 EndGlobal

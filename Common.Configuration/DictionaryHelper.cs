@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GuaranteedRate.Common.Configuration
+namespace Common.Configuration
 {
     public static class DictionaryHelper
     {

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Common.Configuration</title>
+    <authors>Brian Begy</authors>
+    <owners>Brian Begy</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/brianbegy/Common.Configuration</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A set of libraries to make it easier to work with Web.config and App.config</description>
+    <releaseNotes>Include .net 4.0 so old projects can use it.  Prep for nuget release of forked project.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+  </metadata>
+</package>
