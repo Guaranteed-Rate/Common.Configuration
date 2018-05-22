@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("GuaranteedRate.Common.Configuration")]
+[assembly: AssemblyTitle("Common.Configuration")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Guaranteed Rate")]
-[assembly: AssemblyProduct("GuaranteedRate.Common.Configuration")]
+[assembly: AssemblyProduct("Common.Configuration")]
 [assembly: AssemblyCopyright("Copyright © GuaranteedRate 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

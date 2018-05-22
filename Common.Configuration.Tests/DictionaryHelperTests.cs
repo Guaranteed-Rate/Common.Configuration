@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using GuaranteedRate.Common.Configuration;
+using Common.Configuration;
 using NUnit.Framework;
 
-namespace GuaranteedRate.Common.ConfigurationTests
+namespace Common.ConfigurationTests
 {
     [TestFixture()]
     public class DictionaryHelperTests

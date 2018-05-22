@@ -7,8 +7,8 @@
     <ProjectGuid>{49CDAF41-3A5E-4E80-ABC6-4E3D6103664A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuaranteedRate.Common.Configuration</RootNamespace>
-    <AssemblyName>GuaranteedRate.Common.Configuration</AssemblyName>
+    <RootNamespace>Common.Configuration</RootNamespace>
+    <AssemblyName>Common.Configuration</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

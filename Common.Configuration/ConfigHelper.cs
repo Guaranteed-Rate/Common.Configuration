@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GuaranteedRate.Common.Configuration
+namespace Common.Configuration
 {
     public static class ConfigHelper
     {

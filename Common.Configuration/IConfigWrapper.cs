@@ -1,12 +1,10 @@
-﻿namespace GuaranteedRate.Common.Configuration
+﻿namespace Common.Configuration
 {
     /// <summary>
-    /// This class that just wraps the helper functions found in ConfigHelpers.
-    /// This class exists so we can make another project use the IConfigWrapper interface and inject either this class or a Mock at runtime.
+    /// Describes the ConfigWrapper class.  This interface is intended for use in dependency-injection scenarios.
     /// </summary>
-    public class ConfigWrapper : IConfigWrapper
+    public interface IConfigWrapper
     {
-
         /// <summary>
         /// Attempts to get an app setting, returning a default if not found or not castable.
         /// </summary>
@@ -15,9 +13,6 @@
         /// <param name="defaultValue">If not found or wrong type, what should we use?</param>
         /// <param name="errorOnWrongType">Blow up if it won't cast cleanly.</param>
         /// <returns>value of type T, either the value from app.config/web.config or defaultValue.</returns>
-        public T GetAppSetting<T>(string key, T defaultValue, bool errorOnWrongType = false)
-        {
-            return ConfigHelper.GetAppSetting<T>(key, defaultValue, errorOnWrongType);
-        }
+        T GetAppSetting<T>(string key, T defaultValue, bool errorOnWrongType = false);
     }
 }

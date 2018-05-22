@@ -6,8 +6,8 @@
     <ProjectGuid>{356BA6A7-F0B6-41B7-9BE1-37F7AC033DC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuaranteedRate.Common.ConfigurationTests</RootNamespace>
-    <AssemblyName>GuaranteedRate.Common.ConfigurationTests</AssemblyName>
+    <RootNamespace>Common.ConfigurationTests</RootNamespace>
+    <AssemblyName>Common.ConfigurationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,9 +58,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GuaranteedRate.Common.Configuration\GuaranteedRate.Common.Configuration.csproj">
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
       <Project>{49CDAF41-3A5E-4E80-ABC6-4E3D6103664A}</Project>
-      <Name>GuaranteedRate.Common.Configuration</Name>
+      <Name>Common.Configuration</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
