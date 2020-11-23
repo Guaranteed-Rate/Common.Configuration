@@ -1,0 +1,25 @@
+name: Build-Master
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --configuration Release --no-build --verbosity normal
+    - name: Setup Nuget.exe
+      uses: nuget/setup-nuget@v1
+    - name: Add GPR Source
+      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/guaranteed-rate/index.json -Username Guaranteed-Rate -Password ${{ secrets.GITHUB_TOKEN }}
+    - name: nuget push
+      run: nuget push GuaranteedRate.Common.Configuration\bin\release\*.nupkg -Source "GPR" -SkipDuplicate
