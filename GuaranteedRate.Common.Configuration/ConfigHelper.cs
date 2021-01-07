@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace GuaranteedRate.Common.Configuration
 {
@@ -14,7 +15,7 @@ namespace GuaranteedRate.Common.Configuration
         /// <returns>value of type T, either the value from app.config/web.config or defaultValue.</returns>
         public static T GetAppSetting<T>(string key, T defaultValue, bool errorOnWrongType = false)
         {
-            var result = System.Configuration.ConfigurationManager.AppSettings.Get(key);
+            var result = ConfigurationManager.AppSettings.Get(key);
             if (string.IsNullOrEmpty(result))
             {
                 return defaultValue;
