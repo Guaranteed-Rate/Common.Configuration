@@ -17,9 +17,5 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
-    - name: Setup Nuget.exe
-      uses: nuget/setup-nuget@v1
-    - name: Add GPR Source
-      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/guaranteed-rate/index.json -Username Guaranteed-Rate -Password ${{ secrets.GITHUB_TOKEN }}
     - name: nuget push
-      run: nuget push GuaranteedRate.Common.Configuration\bin\release\*.nupkg -Source "GPR" -SkipDuplicate
+      run: dotnet nuget push GuaranteedRate.Common.Configuration\bin\release\*.nupkg -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json -k ${{ secrets.GITHUB_TOKEN }} --skip-duplicate --no-symbols
